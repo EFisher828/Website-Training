@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- This is an HTML comment-->
+<!--
+     The index.html file is considered the primary html file in web projects.
+     For ex., the index.html file is what loads if you visit https://www.monarchweatherenterprise.com/
+     https://www.monarchweatherenterprise.com/index.html would take you to the same page
+
+     This file demonstrates some of the most important structural components of web design.
+     In particular, understanding how html and css work in tandem is crucial to understanding how MonarchView functions.
+-->
+<html lang="en" dir="ltr">
+  <head>
+    <!--
+         The <head> section contains important metadata and links to css stylesheets and some js external files.
+         In this case, we've linked to the stylesheet 'main.css' in the 'css' directory.
+         This naming convention is not strict, but main.css is good practice, and the css subdirectory is personal preference.
+    -->
+    <meta charset="utf-8">
+    <title>This is the Page Title (Shown on the Tab)</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- Header tags exist from h1 to h6, with each h1 being the largest -->
+    <h1>This is a Header - Big, Important Words!</h1>
+
+    <!--
+         div elements are fundamental to organizing any webpage.
+         In essence, they are organizing blocks within which text, images, table, and all other elements can be placed
+         div elements have no inherent width or height, but rather take the shape of the elements they contain.
+         div elements *can* be given predefined width and height with css.
+         The div below has been given a width and height using css, please see '#primaryDiv' in main.css.
+         The primaryDiv id gives the div other important css rules as well.
+    -->
+
+    <div id="primaryDiv">
+      <!-- This header is centered because primaryDiv has property 'text-align: center;'-->
+      <h3>This is a Header - Smaller, Centered Words!</h3>
+      <!--
+           divs can be nested within one another.
+           This div utilizes the display: flex; css property to align some images horizontally.
+      -->
+      <div class="subDiv">
+          <!-- This is an image tag. It requires a src attribute, with optional attributes such as alt, class, id, etc. -->
+          <img src="./images/clouds-v1.png" alt="Images should have alt text" class="subDivImg">
+          <p>The items in this div are horizontally aligned. The items <i>are not</i> wrapped in another div with flex: 1; like the div below, resulting in an uneven distribution of the horizontal space.</p>
+          <img src="./images/clouds-v2.png" alt="That explain what they display" class="subDivImg">
+          <!-- This is a link tag. It requires an href attribute, but has other optional attributes as well -->
+          <a href="https://www.youtube.com/live/3szkFHfr6sA?si=ffO7ZAeGd3ezwjsQ">This is a link! Who doesn't love baby pandas?</a>
+          <img src="./images/clouds-v3.png" alt="For the visually impaired" class="subDivImg">
+      </div>
+
+      <div class="subDiv">
+        <div class="evenSpacing">
+          <img src="./images/clouds-v1.png" alt="Images should have alt text" class="subDivImg">
+        </div>
+        <div class="evenSpacing">
+          <p>The items in this div are horizontally aligned. The items <b>are</b> wrapped in another div with flex: 1;, resulting in an even distribution of the horizontal space. It doesn't matter how much I type here, the widths will remain constant!</p>
+        </div>
+        <div class="evenSpacing">
+          <img src="./images/clouds-v2.png" alt="That explain what they display" class="subDivImg">
+        </div>
+        <div class="evenSpacing">
+          <!-- This link tag uses the target attribute, which forces the link to open in a new tab -->
+          <a href="https://www.youtube.com/live/3szkFHfr6sA?si=ffO7ZAeGd3ezwjsQ" target="_blank">This link opens a new tab <br />Oh, and you can change the font color.</a>
+        </div>
+        <div class="evenSpacing">
+          <img src="./images/clouds-v3.png" alt="For the visually impaired" class="subDivImg">
+        </div>
+      </div>
+      <p id="additionalInfo">As rudimentary as this example may seem, it touches on many of the HTML and CSS elements that are central to MonarchView. If you can master the design of a webpage, the behind-the-scenes functionality will make much more sense. I would say that display: flex; divs are the most crucial to master, as the majority of MonarchView's strucutre is flexed.  Let me know if you have any questions, and when you feel comfortable with HTML/CSS, I'll pass along a demo with JavaScript!</p>
+    </div>
+  </body>
+</html>

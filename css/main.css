@@ -1,0 +1,61 @@
+/*
+   There are many css keywords, and getting everything to look just right can be frustrating.
+   Consider using ChatGPT for css tips - I do it all the time.
+*/
+
+/* You can apply css to all elements of a certain by putting the tag value with not other punctuation (seen below with only 'body') */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* This is an id, as evidenced by the # before the id name. They are unique, and should only be used with one html element */
+#primaryDiv {
+  /* The div will take up 80% of the width of the page */
+  width: 80%;
+  /* Height cannot be quantified with %, so we use vh instead. Basically, 80vh = 80%, so the div will take up 8/10ths of the vertical height of the page */
+  /* In this example, I've used max-content instead of 80vh (or some other value + vh). Ths ensures the div has a height that contains all of the content */
+  height: max-content;
+  /* divs want to be left-aligned, so we must use margin-left: auto; margin-right: auto; to center it on the page */
+  /* Try removing the margin-left and margin-right tags to see what changes */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vh;
+  text-align: center;
+  /* Let's use a dark background color */
+  background-color: #270254;
+  /* To make the text legible against the dark backrgound, let's change the font color to white*/
+  color: white;
+  /* Borders are very helpful for identifying the extent and location of your div. They can be removed before the page is made public. */
+  border: 1px solid green;
+}
+
+/* links (<a> tags) don't like to change color with the rest of the text. Single them out with code like this */
+#primaryDiv a {
+  color: red;
+}
+
+#additionalInfo {
+  padding: 0 10vh;
+}
+
+.subDiv {
+  width: 90%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10vh auto;
+  border: 1px solid red;
+}
+
+/* This is a class, as evidenced by the . before the class name. They are not unique, and can be used with many html elements */
+.subDivImg {
+  width: 20vh;
+  height: auto;
+}
+
+.evenSpacing {
+  flex: 1;
+  border: 1px solid blue;
+}
